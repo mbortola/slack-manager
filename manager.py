@@ -7,7 +7,6 @@ import sys
 import hashlib
 
 slack_token_ciphred = 'OpFOMmWwXimjfckCzwGuES/xpZpp9UAASuHlCaXFqAlf/Vd2Nwu1AzqUNSnvGdHht2Q15TVDEW12NdnORhsatzvSZFdvHUIFv3b5+gO/iPg='
-    # 'xoxp-14631819508-14631819700-15093267796-44ec2395f4'
 
 base_url = 'https://slack.com/api/'
 
