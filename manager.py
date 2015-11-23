@@ -82,6 +82,11 @@ def delete_all_channel_messages(channel_type, channel):
         messages, has_more = _get_history(channel_type, channel)
         map(delete_all, messages)
 
+def find_group_id_from_name(group_list, group_name):
+    for group in group_list:
+        if group.get('name') == group_name:
+            return group.get('id')
+    return None
 
 if __name__ == "__main__":
 
@@ -98,5 +103,8 @@ if __name__ == "__main__":
     first_channel_id = channels_list[0].get('id')
 
     history, has_more = _get_history('channels', first_channel_id, count=10)
+
+    sd_gid = find_group_id_from_name(groups_list, 'road-to-codemotion')
+    delete_all_channel_messages('groups', sd_gid)
 
     print base_info
